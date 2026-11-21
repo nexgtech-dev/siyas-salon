@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Siyas Luxury Spa &amp; Salon | Private Moroccan Bath Sanctuary &amp; Bridal Suites | Kolar Road, Bhopal</title>
+  <meta name="description" content="Siyas Luxury Spa and Salon, 2nd Floor Danish Kunj Bridge, Kolar Road, Bhopal. 8+ years of premier Royal Bridal Makeovers, Authentic Moroccan Bath Hammam Rituals, Nanoplastia Hair Aesthetics, and Private VIP Suites.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/siyas-icon.svg">
+
+  <!-- Google Fonts: Playfair Display & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Outfit"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+          colors: {
+            orchid: {
+              50: '#FDF4FF',
+              100: '#FAE8FF',
+              200: '#F5D0FE',
+              300: '#F0ABFC',
+              400: '#E879F9',
+              500: '#D946EF',
+              600: '#C026D3',
+              700: '#A21CAF',
+              800: '#86198F',
+              900: '#701A75',
+            },
+            roseGold: {
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+            },
+            gold: {
+              300: '#FDE68A',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+            },
+            noir: {
+              800: '#1A1325',
+              900: '#120D1A',
+              950: '#0A070D'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Luxury Velvet & Silk Glow */
+    .glow-orchid {
+      box-shadow: 0 0 25px -5px rgba(217, 70, 239, 0.35);
+    }
+    .spa-pattern {
+      background-image: radial-gradient(rgba(217, 70, 239, 0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .badge-luxury {
+      background: linear-gradient(135deg, rgba(217, 70, 239, 0.15), rgba(18, 13, 26, 0.85));
+      border: 1px solid rgba(232, 121, 249, 0.35);
+    }
+    .card-luxury-border {
+      border: 1px solid rgba(245, 208, 254, 0.4);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-luxury-border:hover {
+      border-color: #D946EF;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -10px rgba(217, 70, 239, 0.18);
+    }
+    .modal-backdrop {
+      background: rgba(10, 7, 13, 0.85);
+      backdrop-filter: blur(8px);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #120D1A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D946EF;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7F5] text-slate-800 antialiased selection:bg-orchid-500 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. DYNAMIC TOP VIP CONSULTATION COUNTDOWN RIBBON (72-Hour Urgency Beacon) -->
+  <!-- ========================================================================= -->
+  <div id="countdownRibbon" class="bg-noir-950 text-white border-b border-orchid-500/30 py-2.5 px-4 text-xs sm:text-sm font-medium tracking-wide sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-left">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-gold-500 text-noir-950 uppercase tracking-wider animate-pulse">
+          ✨ VIP Reservation Window
+        </span>
+        <span>
+          Danish Kunj Bridge Campus (Kolar Road). Only <strong class="text-gold-400">2 Weekend Suites Remaining</strong>!
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-slate-400 text-xs hidden md:inline">Priority Booking Window Closes In:</span>
+        <div class="flex items-center gap-1.5 font-mono font-bold text-gold-400 text-xs sm:text-sm bg-noir-900/90 px-3 py-1 rounded border border-orchid-500/20">
+          <span id="beaconHours">71</span>h :
+          <span id="beaconMins">59</span>m :
+          <span id="beaconSecs">12</span>s
+        </div>
+        <a href="#bookingSection" class="bg-orchid-600 hover:bg-orchid-500 text-white text-xs px-3 py-1 rounded font-semibold transition hidden sm:inline-block">
+          Claim VIP Suite
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. STICKY TECHNICAL NAVIGATION HEADER (Single-Line Whitespace-Nowrap)      -->
+  <!-- ========================================================================= -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-[41px] sm:top-[45px] z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      
+      <!-- Vector Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-orchid-500 rounded-lg p-1">
+        <img src="assets/siyas-brand-logo.svg" alt="Siyas Luxury Spa and Salon Bhopal" class="h-10 sm:h-12 w-auto object-contain">
+      </a>
+
+      <!-- Desktop Nav (Single-Line Whitespace-Nowrap Customer Navigation) -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700 whitespace-nowrap">
+        <a href="#specialties" class="hover:text-orchid-600 transition">Signature Rituals</a>
+        <a href="#curriculum" class="hover:text-orchid-600 transition">Ritual Directory</a>
+        <a href="#spaAmbience" class="hover:text-orchid-600 transition">Private Suites</a>
+        <a href="#clientProof" class="hover:text-orchid-600 transition">Guest Reviews</a>
+        <a href="#faqSection" class="hover:text-orchid-600 transition">FAQ &amp; Guide</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="tel:+918401933469" class="flex items-center gap-2 text-slate-800 font-bold text-sm hover:text-orchid-600 transition px-2 py-1">
+          <div class="w-8 h-8 rounded-full bg-orchid-100 flex items-center justify-center text-orchid-700">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+          </div>
+          <span>+91 84019 33469</span>
+        </a>
+        <a href="#bookingSection" class="bg-noir-900 hover:bg-noir-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-lg shadow-sm border border-noir-700 hover:border-orchid-500 transition flex items-center gap-2">
+          <span>Reserve VIP Suite</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-orchid-400"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <a href="tel:+918401933469" class="p-2 text-orchid-600 bg-orchid-50 rounded-lg sm:hidden" aria-label="Call VIP Desk">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+        </a>
+        <button id="mobileMenuBtn" type="button" class="p-2 text-slate-700 hover:text-noir-900 focus:outline-none focus:ring-2 focus:ring-orchid-500 rounded-lg" aria-label="Toggle Navigation Menu">
+          <i id="menuIcon" data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 shadow-xl transition-all">
+      <nav class="flex flex-col gap-3 text-sm font-semibold text-slate-700">
+        <a href="#specialties" class="py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-orchid-600" onclick="closeMobileDrawer()">Signature Rituals</a>
+        <a href="#curriculum" class="py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-orchid-600" onclick="closeMobileDrawer()">Ritual Directory</a>
+        <a href="#spaAmbience" class="py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-orchid-600" onclick="closeMobileDrawer()">Private Suites</a>
+        <a href="#clientProof" class="py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-orchid-600" onclick="closeMobileDrawer()">Guest Reviews</a>
+        <a href="#faqSection" class="py-2 px-3 rounded-lg hover:bg-slate-50 hover:text-orchid-600" onclick="closeMobileDrawer()">FAQ &amp; Guide</a>
+        <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+          <a href="tel:+918401933469" class="flex items-center justify-center gap-2 bg-slate-100 text-slate-900 py-3 rounded-lg font-bold text-sm">
+            <i data-lucide="phone-call" class="w-4 h-4 text-orchid-600"></i>
+            <span>Call +91 84019 33469</span>
+          </a>
+          <a href="#bookingSection" class="flex items-center justify-center gap-2 bg-orchid-600 text-white py-3 rounded-lg font-bold text-sm shadow-md" onclick="closeMobileDrawer()">
+            <span>Reserve VIP Appointment</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 3. HERO SANCTUARY: CENTERED EDITORIAL MOROCCAN HAMMAM ATELIER            -->
+  <!-- ========================================================================= -->
+  <section class="relative bg-noir-950 text-white pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden spa-pattern">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orchid-950/40 via-noir-950 to-noir-950 pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <!-- Top Heritage Pill -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-luxury text-xs font-semibold text-orchid-300 mb-6">
+        <i data-lucide="crown" class="w-3.5 h-3.5 text-gold-400"></i>
+        <span>Kolar Road's Private Balneotherapy &amp; Haute Bridal Atelier</span>
+        <span class="text-gold-400 font-mono font-bold ml-1">4.8★ Verified</span>
+      </div>
+
+      <!-- Headline: Organic Luxury Phrasing -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
+        Private Moroccan Bath Sanctuary <br class="hidden sm:inline">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orchid-300 via-roseGold-300 to-gold-300 italic">
+          &amp; Ayurvedic Balneotherapy Suites
+        </span>
+      </h1>
+
+      <p class="text-slate-300 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+        Immerse yourself in therapeutic eucalyptus steam chambers, organic botanical body polishes, and high-fashion HD airbrush bridal artistry. Located above Danish Kunj Bridge, Kolar Road, Bhopal.
+      </p>
+
+      <!-- Center Dual Actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a href="https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa%20Bhopal,%20I%20would%20like%20to%20inquire%20about%20your%20Moroccan%20Bath%20and%20Bridal%20Suites." 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-500/20 transition text-sm">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>WhatsApp VIP Concierge</span>
+        </a>
+        <a href="#bookingSection" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-noir-900/90 hover:bg-noir-800 text-white font-bold px-6 py-3.5 rounded-xl border border-orchid-500/30 hover:border-orchid-400 transition text-sm">
+          <span>Reserve VIP Suite</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-orchid-400"></i>
+        </a>
+      </div>
+
+      <!-- Asymmetric 3-Frame Showcase Gallery (Distinctive Architecture) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div class="relative rounded-2xl overflow-hidden border border-orchid-500/20 bg-noir-900 group">
+          <img src="assets/siyas-hero-luxury-spa.jpg" alt="Moroccan Steam Hammam" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-noir-950 via-noir-950/40 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[10px] font-mono text-orchid-400 uppercase tracking-widest font-bold">Sanctuary Ritual</span>
+            <h4 class="text-sm font-bold text-white">Eucalyptus Steam Hammam</h4>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden border border-gold-500/30 bg-noir-900 group md:-translate-y-4 shadow-xl">
+          <img src="assets/siyas-bridal-suite.jpg" alt="VIP Bridal Makeup Suite" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-noir-950 via-noir-950/40 to-transparent"></div>
+          <div class="absolute top-3 right-3 bg-gold-500 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded font-mono">MOST COVETED</div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[10px] font-mono text-gold-400 uppercase tracking-widest font-bold">Stage Vanity Suite</span>
+            <h4 class="text-base font-bold text-white">HD Airbrush Bridal Atelier</h4>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden border border-orchid-500/20 bg-noir-900 group">
+          <img src="assets/siyas-moroccan-hammam.jpg" alt="Private Moroccan Steam Bath" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-noir-950 via-noir-950/40 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[10px] font-mono text-orchid-400 uppercase tracking-widest font-bold">Herbal Healing</span>
+            <h4 class="text-sm font-bold text-white">Moroccan Black Soap Scrub</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. TRUST & LUXURY ACCREDITATION STRIP                                     -->
+  <!-- ========================================================================= -->
+  <section class="bg-white border-y border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="text-2xl sm:text-3xl font-extrabold text-noir-900 font-serif">8+ Years</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Kolar Road Landmark</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Estd. 2016 in Danish Kunj</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="text-2xl sm:text-3xl font-extrabold text-orchid-600 font-serif">1,200+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Brides Styled</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Across Bhopal &amp; Central India</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="text-2xl sm:text-3xl font-extrabold text-roseGold-600 font-serif">VIP Suites</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Private Sanctums</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">100% Discreet &amp; Sanitary</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="text-2xl sm:text-3xl font-extrabold text-gold-500 font-serif">European</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Authentic Products</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Zero Cheap Dilutions</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. HIGH-TICKET FEATURED SPECIALTY EDITORIAL CARDS (Rule 5 Enforced)       -->
+  <!-- ========================================================================= -->
+  <section id="specialties" class="py-16 sm:py-24 bg-[#FAF7F5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orchid-100 text-orchid-800 text-xs font-bold uppercase tracking-wider mb-3">
+          Curated High-Value Indulgences
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-noir-900 tracking-tight">
+          Signature Rituals &amp; Haute Esthetics
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg mt-4">
+          Tailored for milestone celebrations and rejuvenating wellness escapes. Experience master artistry in private suites.
+        </p>
+      </div>
+
+      <!-- 3 Flagship Luxury Editorial Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1: Royal Bridal Trousseau Suite -->
+        <div class="bg-white rounded-2xl overflow-hidden card-luxury-border flex flex-col shadow-sm">
+          <div class="relative h-56 overflow-hidden bg-noir-900">
+            <img src="assets/siyas-bridal-suite.jpg" alt="Royal Bridal Suite Siyas Bhopal" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-orchid-600 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              BRIDAL MASTERPIECE
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-noir-950/85 backdrop-blur-md rounded-lg p-2.5 text-white flex justify-between items-center text-xs">
+              <span class="font-medium text-slate-300">Duration: 4 to 5 Hours</span>
+              <span class="font-mono font-bold text-gold-400">Package: ₹15k – ₹35k</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-serif font-bold text-noir-900 mb-2">
+                Royal Bridal Makeover &amp; Trousseau Suite
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                The pinnacle of luxury bridal styling. Bespoke 4K HD Airbrush makeup with imported cosmetics (MAC, Huda Beauty, NARS), dupatta draping, and private bridal dressing lounge.
+              </p>
+              
+              <!-- Ritual Highlights -->
+              <div class="space-y-2 mb-6">
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>4K HD Airbrush Makeup with 24-Hour sweat-proof guarantee.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Intricate bridal hair architecture &amp; real fresh floral setting.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Designer lehenga, jewelry, and dupatta draping artistry.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Private VIP bridal chamber with personal artist and assistant.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+              <button onclick="openTipModal('bridal')" class="w-full bg-noir-900 hover:bg-noir-800 text-white text-xs sm:text-sm font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4 text-orchid-400"></i>
+                <span>View Ritual Breakdown &amp; Products</span>
+              </button>
+              <a href="https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20I%20would%20like%20to%20reserve%20a%20Bridal%20Consultation%20and%20check%20wedding%20dates." class="w-full text-center text-xs font-bold text-orchid-700 hover:text-orchid-800 py-1.5 transition">
+                Check Wedding Date Availability &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Traditional Moroccan Hammam Ritual -->
+        <div class="bg-white rounded-2xl overflow-hidden card-luxury-border flex flex-col shadow-sm">
+          <div class="relative h-56 overflow-hidden bg-noir-900">
+            <img src="assets/siyas-moroccan-hammam.jpg" alt="Traditional Moroccan Bath Siyas" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-gold-600 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              SIGNATURE SPA
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-noir-950/85 backdrop-blur-md rounded-lg p-2.5 text-white flex justify-between items-center text-xs">
+              <span class="font-medium text-slate-300">Duration: 90 to 120 Mins</span>
+              <span class="font-mono font-bold text-gold-400">Session: ₹4.5k – ₹8.5k</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-serif font-bold text-noir-900 mb-2">
+                Traditional Moroccan Bath &amp; Steam Hammam
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                An ancient Mediterranean detoxification ritual. Infused eucalyptus black soap lathering, private steam chamber, gentle Kessa exfoliating glove peel, and nourishing Rhassoul clay wrap.
+              </p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Authentic Moroccan black olive eucalyptus soap cleansing.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Deep thermal steam bath to relax muscles and soften keratin.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Full-body dead skin exfoliation using genuine Kessa mitts.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Pure cold-pressed Moroccan Argan oil body hydration finish.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+              <button onclick="openTipModal('moroccan')" class="w-full bg-noir-900 hover:bg-noir-800 text-white text-xs sm:text-sm font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4 text-orchid-400"></i>
+                <span>View Ritual Breakdown &amp; Products</span>
+              </button>
+              <a href="https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20details%20for%20the%20Traditional%20Moroccan%20Bath%20Ritual." class="w-full text-center text-xs font-bold text-orchid-700 hover:text-orchid-800 py-1.5 transition">
+                Inquire via WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Nanoplastia & Hair Botox Lamination -->
+        <div class="bg-white rounded-2xl overflow-hidden card-luxury-border flex flex-col shadow-sm">
+          <div class="relative h-56 overflow-hidden bg-noir-900">
+            <img src="assets/siyas-hair-nanoplastia.jpg" alt="Nanoplastia Hair Therapy Siyas" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-roseGold-600 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              HAIR AESTHETICS
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-noir-950/85 backdrop-blur-md rounded-lg p-2.5 text-white flex justify-between items-center text-xs">
+              <span class="font-medium text-slate-300">Duration: 2.5 to 3 Hours</span>
+              <span class="font-mono font-bold text-gold-400">Treatment: ₹4k – ₹10k</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-serif font-bold text-noir-900 mb-2">
+                Nanoplastia, Botox &amp; Brazilian Keratin Therapy
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Advanced molecular hair repair. Restores frizzy, chemically treated, or bleached hair with mirror-like shine, intense silkiness, and long-lasting smoothness without harsh formaldehyde fumes.
+              </p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Formaldehyde-free organic amino acid &amp; collagen infusion.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Olaplex No. 1 &amp; No. 2 molecular disulfide bond re-linking.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>High-gloss glass hair lamination lasting up to 6 months.</span>
+                </div>
+                <div class="flex items-start gap-2 text-xs text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-orchid-600 shrink-0 mt-0.5"></i>
+                  <span>Includes complimentary post-treatment sulfate-free wash.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+              <button onclick="openTipModal('hair')" class="w-full bg-noir-900 hover:bg-noir-800 text-white text-xs sm:text-sm font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4 text-orchid-400"></i>
+                <span>View Ritual Breakdown &amp; Products</span>
+              </button>
+              <a href="https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20details%20for%20Nanoplastia%20and%20Hair%20Botox%20Therapy." class="w-full text-center text-xs font-bold text-orchid-700 hover:text-orchid-800 py-1.5 transition">
+                Inquire via WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. RITUALS GRID WITH DYNAMIC CATEGORY FILTER (filterServices)             -->
+  <!-- ========================================================================= -->
+  <section id="curriculum" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-3">
+          Interactive Treatment Menu
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-noir-900 tracking-tight">
+          Curated Indulgences &amp; Clinical Aesthetics
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg mt-3">
+          Explore specialized services across bridal suites, steam hammams, hair repair, and dermatological facials.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
+          <button onclick="filterServices('all')" id="tab-all" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-noir-900 text-white shadow-sm">
+            All Rituals
+          </button>
+          <button onclick="filterServices('bridal')" id="tab-bridal" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Bridal Trousseau
+          </button>
+          <button onclick="filterServices('moroccan')" id="tab-moroccan" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Moroccan Spa &amp; Hammam
+          </button>
+          <button onclick="filterServices('hair')" id="tab-hair" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Hair Aesthetics
+          </button>
+          <button onclick="filterServices('skin')" id="tab-skin" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Derma Glow &amp; Facials
+          </button>
+        </div>
+      </div>
+
+      <!-- Rituals Grid Items -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Item 1: Royal Bridal -->
+        <div class="service-card bridal bg-[#FAF7F5] border border-slate-200 rounded-2xl p-6 transition flex flex-col justify-between hover:border-orchid-500 hover:shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-[11px] font-bold text-orchid-700 bg-orchid-100 px-2.5 py-1 rounded-full uppercase">4-5 Hours</span>
+              <span class="font-mono font-bold text-xs text-gold-600">₹15,000 – ₹35,000</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-noir-900 mb-2">Royal Bridal HD Airbrush Trousseau</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+              Complete wedding day transformation with HD airbrush cosmetics, floral hair architecture, and private suite dressing.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">MAC &amp; Huda Beauty</span>
+            <button onclick="openTipModal('bridal')" class="text-xs font-bold text-orchid-700 hover:text-orchid-800">
+              View Ritual &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 2: Moroccan Bath -->
+        <div class="service-card moroccan bg-[#FAF7F5] border border-slate-200 rounded-2xl p-6 transition flex flex-col justify-between hover:border-orchid-500 hover:shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-[11px] font-bold text-gold-700 bg-gold-100 px-2.5 py-1 rounded-full uppercase">90-120 Mins</span>
+              <span class="font-mono font-bold text-xs text-gold-600">₹4,500 – ₹8,500</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-noir-900 mb-2">Traditional Moroccan Bath &amp; Hammam</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+              Eucalyptus black soap, private steam room pore opening, Kessa glove exfoliation, and pure argan oil massage.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Rhassoul Lava Clay</span>
+            <button onclick="openTipModal('moroccan')" class="text-xs font-bold text-orchid-700 hover:text-orchid-800">
+              View Ritual &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 3: Nanoplastia -->
+        <div class="service-card hair bg-[#FAF7F5] border border-slate-200 rounded-2xl p-6 transition flex flex-col justify-between hover:border-orchid-500 hover:shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-[11px] font-bold text-roseGold-700 bg-roseGold-100 px-2.5 py-1 rounded-full uppercase">2.5-3 Hours</span>
+              <span class="font-mono font-bold text-xs text-gold-600">₹4,000 – ₹10,000</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-noir-900 mb-2">Nanoplastia &amp; Hair Botox Lamination</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+              Formaldehyde-free bio-protein reconstructive treatment for lasting silkiness, high-gloss shine, and zero frizz.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Olaplex Molecular Bond</span>
+            <button onclick="openTipModal('hair')" class="text-xs font-bold text-orchid-700 hover:text-orchid-800">
+              View Ritual &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 4: Pre-Bridal Radiance -->
+        <div class="service-card bridal bg-[#FAF7F5] border border-slate-200 rounded-2xl p-6 transition flex flex-col justify-between hover:border-orchid-500 hover:shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-[11px] font-bold text-purple-700 bg-purple-100 px-2.5 py-1 rounded-full uppercase">1-2 Days</span>
+              <span class="font-mono font-bold text-xs text-gold-600">₹8,000 – ₹18,000</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-noir-900 mb-2">Pre-Bridal Radiance &amp; Body Polish</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+              Full-body chocolate body polish, Brazilian waxing, Casmara algae facial, and botanical spa manicure/pedicure.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Complete Trousseau Prep</span>
+            <button onclick="openTipModal('prebridal')" class="text-xs font-bold text-orchid-700 hover:text-orchid-800">
+              View Ritual &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 5: Hydra-Facial MD -->
+        <div class="service-card skin bg-[#FAF7F5] border border-slate-200 rounded-2xl p-6 transition flex flex-col justify-between hover:border-orchid-500 hover:shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-[11px] font-bold text-teal-700 bg-teal-100 px-2.5 py-1 rounded-full uppercase">60 Mins</span>
+              <span class="font-mono font-bold text-xs text-gold-600">₹3,500 – ₹6,500</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-noir-900 mb-2">Hydra-Facial MD &amp; Derma Glow Aesthetic</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+              6-Step vortex vacuum extractions, gentle chemical exfoliation, hyaluronic acid hydration, and LED phototherapy.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Instant Glass Skin</span>
+            <button onclick="openTipModal('hydra')" class="text-xs font-bold text-orchid-700 hover:text-orchid-800">
+              View Ritual &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 6: Swedish & Deep Tissue Massage -->
+        <div class="service-card moroccan bg-[#FAF7F5] border border-slate-200 rounded-2xl p-6 transition flex flex-col justify-between hover:border-orchid-500 hover:shadow-md">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-[11px] font-bold text-blue-700 bg-blue-100 px-2.5 py-1 rounded-full uppercase">60-90 Mins</span>
+              <span class="font-mono font-bold text-xs text-gold-600">₹2,500 – ₹5,000</span>
+            </div>
+            <h4 class="text-lg font-serif font-bold text-noir-900 mb-2">Swedish &amp; Aromatherapy Deep Tissue Spa</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+              Therapeutic warm essential oils, heated stone relief, acupressure relaxation, and complimentary herbal steam shower.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Candlelit Spa Sanctuary</span>
+            <button onclick="openTipModal('swedish')" class="text-xs font-bold text-orchid-700 hover:text-orchid-800">
+              View Ritual &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. LUXURY SPA AMBIENCE & PRIVATE SUITE SHOWCASE                           -->
+  <!-- ========================================================================= -->
+  <section id="spaAmbience" class="py-16 sm:py-24 bg-noir-950 text-white spa-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full badge-luxury text-orchid-300 text-xs font-bold uppercase tracking-wider mb-3">
+          Aesthetic Sanctum &amp; Suites
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold tracking-tight">
+          Designed for Absolute Tranquility &amp; Indulgence
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-3">
+          Overlooking Danish Kunj Bridge on Kolar Road. Every treatment is hosted in an isolated, private chamber equipped with customizable ambient lighting, aromatherapy, and private steam showers.
+        </p>
+      </div>
+
+      <!-- Facility Photo Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="rounded-2xl overflow-hidden border border-orchid-500/20 bg-noir-900 group">
+          <div class="h-64 overflow-hidden">
+            <img src="assets/siyas-spa-suite-ambience.jpg" alt="Private Candlelit Treatment Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-5">
+            <h4 class="font-serif font-bold text-white text-base mb-1">Private Candlelit Spa Suites</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Sound-insulated massage sanctums with heated therapy tables, ambient chromotherapy, and soothing organic essential oil diffusers.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border border-orchid-500/20 bg-noir-900 group">
+          <div class="h-64 overflow-hidden">
+            <img src="assets/siyas-nail-art-lounge.jpg" alt="Botanical Pedicure & Nail Lounge" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-5">
+            <h4 class="font-serif font-bold text-white text-base mb-1">Botanical Pedicure &amp; Nail Lounge</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Plush velvet seating with vortex hydro-massage foot baths, organic botanical scrubs, and gel nail lacquer drying stations.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border border-orchid-500/20 bg-noir-900 group">
+          <div class="h-64 overflow-hidden">
+            <img src="assets/siyas-hydra-facial.jpg" alt="Derma Aesthetic Facial Clinic" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-5">
+            <h4 class="font-serif font-bold text-white text-base mb-1">Clinical Derma Esthetics Suite</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Equipped with medical-grade Hydra-Facial vortex machines, Casmara cryo-cooling masks, and multi-spectrum LED collagen stimulation.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live VIP Chamber Reservation Banner -->
+      <div class="mt-12 bg-noir-900 border border-orchid-500/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="text-center sm:text-left">
+          <div class="text-lg sm:text-xl font-serif font-bold text-white">Experience personalized consultation in our Danish Kunj salon.</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Directly located on 2nd Floor, DK 4 - Annexe 4, Danish Kunj Bridge, Kolar Road, Bhopal.</div>
+        </div>
+        <a href="#bookingSection" class="bg-orchid-600 hover:bg-orchid-500 text-white font-bold text-sm px-6 py-3.5 rounded-xl whitespace-nowrap transition shadow-lg shadow-orchid-600/30">
+          Reserve VIP Chamber &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. VERIFIED CLIENT SOCIAL PROOF & KOLAR ROAD CASE STUDIES                 -->
+  <!-- ========================================================================= -->
+  <section id="clientProof" class="py-16 sm:py-24 bg-[#FAF7F5] border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orchid-100 text-orchid-800 text-xs font-bold uppercase tracking-wider mb-3">
+          Patron Experiences
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-noir-900 tracking-tight">
+          Praised by Discerning Clients Across South Bhopal
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg mt-3">
+          Authentic stories from brides and spa patrons who trust Siyas for signature occasions and monthly rejuvenation.
+        </p>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Story 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-gold-500 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6 italic">
+              "Booking my bridal makeup at Siyas Spa was the best decision of my wedding! The private bridal chamber on Kolar Road gave me total privacy and peace. My HD airbrush makeup looked like an absolute dream in photography and stayed intact through 8 hours of ceremonies without a touch-up."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-orchid-100 text-orchid-800 flex items-center justify-center font-bold text-sm font-serif">
+              PR
+            </div>
+            <div>
+              <div class="font-bold text-sm text-noir-900">Pooja Raghuwanshi</div>
+              <div class="text-xs text-slate-500">Bride • Sarvadharma Colony, Kolar Road</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-gold-500 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6 italic">
+              "The Traditional Moroccan Bath here is unlike anything else in Bhopal. The authentic eucalyptus soap and steam session left my skin unbelievably silky and soft. You can tell they use genuine imported products rather than cheap dilutions. Highly recommended for complete stress relief."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-gold-100 text-gold-800 flex items-center justify-center font-bold text-sm font-serif">
+              SK
+            </div>
+            <div>
+              <div class="font-bold text-sm text-noir-900">Shreya Kulkarni</div>
+              <div class="text-xs text-slate-500">Corporate Executive • Danish Kunj</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-gold-500 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6 italic">
+              "I got the Nanoplastia hair treatment done last month and my coarse frizzy hair is still behaving like pure silk. Their senior hair stylist analyzed my hair texture first and explained every step. The salon's cleanliness and hospitality above Danish Kunj Bridge are top notch."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-roseGold-100 text-roseGold-800 flex items-center justify-center font-bold text-sm font-serif">
+              NV
+            </div>
+            <div>
+              <div class="font-bold text-sm text-noir-900">Neha Verma</div>
+              <div class="text-xs text-slate-500">Regular Patron • Shahpura Lake Enclave</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Client Care & Hygiene Banner -->
+      <div class="mt-12 rounded-2xl overflow-hidden border border-slate-200 bg-white p-6 shadow-sm flex flex-col md:flex-row items-center gap-6">
+        <img src="assets/siyas-client-consultation.jpg" alt="Siyas Spa Patron Care" class="w-full md:w-56 h-40 object-cover rounded-xl">
+        <div>
+          <div class="inline-block bg-orchid-100 text-orchid-800 font-bold text-[11px] px-2.5 py-0.5 rounded uppercase mb-2">
+            Sanitary &amp; Safety Protocol
+          </div>
+          <h4 class="text-lg font-serif font-bold text-noir-900 mb-1">
+            Strict Single-Use Linen &amp; Medical-Grade Disinfection
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+            Every spa suite undergoes UV sanitation and complete linen change between patrons. All manicure/pedicure tools are autoclaved in sealed sterilization pouches.
+          </p>
+          <div class="flex items-center gap-4 text-xs font-semibold text-slate-700">
+            <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-orchid-600"></i> Autoclaved Metal Instruments</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-orchid-600"></i> 100% Organic Essential Oils</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 9. INTERACTIVE 2-STEP VIP APPOINTMENT WIZARD (handleBookingSubmit)        -->
+  <!-- ========================================================================= -->
+  <section id="bookingSection" class="py-16 sm:py-24 bg-noir-950 text-white relative spa-pattern">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full badge-luxury text-orchid-300 text-xs font-bold uppercase tracking-wider mb-3">
+          Step 1: Direct VIP Reservation
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold tracking-tight">
+          Reserve Your Bespoke Appointment
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+          Reserve your treatment chamber or bridal consultation slot. Our concierge will confirm therapist availability on WhatsApp immediately.
+        </p>
+      </div>
+
+      <!-- Form Container Card -->
+      <div class="bg-noir-900/90 border border-orchid-500/30 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Guest Full Name -->
+            <div>
+              <label for="clientName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Guest Full Name *
+              </label>
+              <div class="relative">
+                <input type="text" id="clientName" required placeholder="e.g. Ananya Sen" 
+                       class="w-full bg-noir-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orchid-400 focus:ring-1 focus:ring-orchid-400 transition">
+              </div>
+            </div>
+
+            <!-- WhatsApp Number -->
+            <div>
+              <label for="clientPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                WhatsApp Phone Number *
+              </label>
+              <div class="relative">
+                <input type="tel" id="clientPhone" required placeholder="+91 84019 33469" 
+                       class="w-full bg-noir-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orchid-400 focus:ring-1 focus:ring-orchid-400 transition">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Desired Ritual -->
+            <div>
+              <label for="serviceChoice" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Desired Treatment or Ritual *
+              </label>
+              <select id="serviceChoice" required 
+                      class="w-full bg-noir-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orchid-400 focus:ring-1 focus:ring-orchid-400 transition">
+                <option value="Royal Bridal Makeover & Trousseau (₹15k–₹35k)">Royal Bridal Makeover &amp; Trousseau (₹15k–₹35k)</option>
+                <option value="Traditional Moroccan Bath & Steam Hammam (₹4.5k–₹8.5k)">Traditional Moroccan Bath &amp; Steam Hammam (₹4.5k–₹8.5k)</option>
+                <option value="Nanoplastia & Hair Botox Lamination (₹4k–₹10k)">Nanoplastia &amp; Hair Botox Lamination (₹4k–₹10k)</option>
+                <option value="Pre-Bridal Radiance & Full Body Polish (₹8k–₹18k)">Pre-Bridal Radiance &amp; Full Body Polish (₹8k–₹18k)</option>
+                <option value="Hydra-Facial MD & Derma Aesthetic Glow (₹3.5k–₹6.5k)">Hydra-Facial MD &amp; Derma Aesthetic Glow (₹3.5k–₹6.5k)</option>
+                <option value="Swedish & Aromatherapy Deep Tissue Spa (₹2.5k–₹5k)">Swedish &amp; Aromatherapy Deep Tissue Spa (₹2.5k–₹5k)</option>
+              </select>
+            </div>
+
+            <!-- Preferred Time Slot -->
+            <div>
+              <label for="timePreference" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                Preferred Timing Slot *
+              </label>
+              <select id="timePreference" required 
+                      class="w-full bg-noir-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orchid-400 focus:ring-1 focus:ring-orchid-400 transition">
+                <option value="Morning Glow (10:30 AM – 01:00 PM)">Morning Glow (10:30 AM – 01:00 PM)</option>
+                <option value="Afternoon Pampering (01:30 PM – 04:30 PM)">Afternoon Pampering (01:30 PM – 04:30 PM)</option>
+                <option value="Evening Unwind (05:00 PM – 08:30 PM)">Evening Unwind (05:00 PM – 08:30 PM)</option>
+                <option value="Weekend Bridal Trial (Flexible Time)">Weekend Bridal Trial (Flexible Time)</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" 
+                  class="w-full bg-gradient-to-r from-orchid-500 to-roseGold-500 hover:from-orchid-400 hover:to-roseGold-400 text-white font-extrabold text-sm sm:text-base py-4 rounded-xl shadow-lg shadow-orchid-500/25 transition duration-200 flex items-center justify-center gap-2">
+            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+            <span>Confirm VIP Reservation &amp; Dispatch to WhatsApp</span>
+          </button>
+
+          <p class="text-center text-xs text-slate-400">
+            🔒 By submitting, your private suite will be tentatively held for 2 hours for therapist allocation.
+          </p>
+
+        </form>
+
+        <!-- Visual Confirmation Modal / Message (confirmMsg) -->
+        <div id="confirmMsg" class="hidden mt-8 p-6 bg-noir-950 border border-orchid-500/50 rounded-xl shadow-2xl">
+          <div class="flex items-center gap-3 text-orchid-400 mb-3">
+            <div class="w-8 h-8 rounded-full bg-orchid-500/20 flex items-center justify-center">
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base sm:text-lg font-serif font-bold text-white">VIP Chamber Reservation Held!</h3>
+          </div>
+          
+          <div id="confirmDetails" class="text-xs sm:text-sm text-slate-300 font-sans bg-noir-900 p-4 rounded-lg border border-slate-800 mb-4 leading-relaxed">
+            <!-- Dynamic Confirmation Injected by JavaScript -->
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-3">
+            <a id="confirmWhatsappBtn" href="#" target="_blank" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-lg text-xs sm:text-sm transition">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              <span>Send Reservation to Siyas Concierge on WhatsApp</span>
+            </a>
+            <button onclick="resetBookingForm()" type="button" 
+                    class="w-full sm:w-auto text-xs text-slate-400 hover:text-white px-4 py-2 text-center transition">
+              Reserve Another Treatment
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 10. 4-COLUMN LUXURY FOOTER, FAQ ACCORDION (toggleFaq) & MOBILE DOCK       -->
+  <!-- ========================================================================= -->
+  <footer class="bg-noir-950 text-slate-400 pt-16 pb-28 sm:pb-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- FAQ Accordion Subsection (toggleFaq) -->
+      <div id="faqSection" class="max-w-3xl mx-auto mb-16 pb-16 border-b border-slate-800">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold text-orchid-400 uppercase tracking-wider">Frequently Asked Questions</span>
+          <h3 class="text-2xl font-serif font-bold text-white mt-1">Everything You Need to Know</h3>
+        </div>
+
+        <div class="space-y-3">
+          
+          <!-- FAQ Item 1 -->
+          <div class="bg-noir-900 border border-slate-800 rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(1)" class="w-full text-left px-5 py-4 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-orchid-400 transition">
+              <span>What is included in the Traditional Moroccan Bath?</span>
+              <i id="faqIcon-1" data-lucide="plus" class="w-5 h-5 text-orchid-400 shrink-0"></i>
+            </button>
+            <div id="faqAns-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+              Our Moroccan Hammam takes place in a heated steam chamber. It includes black eucalyptus soap lathering, thermal steam softening, vigorous whole-body exfoliation using genuine imported Kessa mitts, mineral-rich Rhassoul clay wrap, and cold-pressed argan oil body hydration.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-noir-900 border border-slate-800 rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(2)" class="w-full text-left px-5 py-4 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-orchid-400 transition">
+              <span>Are bridal trials available before confirming wedding dates?</span>
+              <i id="faqIcon-2" data-lucide="plus" class="w-5 h-5 text-orchid-400 shrink-0"></i>
+            </button>
+            <div id="faqAns-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+              Yes, we offer bespoke bridal consultations and half-face trials where you can discuss your lehenga shade, jewelry styling, skin undertones, and test cosmetic formulations in our private bridal lounge before confirming your booking.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-noir-900 border border-slate-800 rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(3)" class="w-full text-left px-5 py-4 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-orchid-400 transition">
+              <span>Is Nanoplastia safe for colored and chemically treated hair?</span>
+              <i id="faqIcon-3" data-lucide="plus" class="w-5 h-5 text-orchid-400 shrink-0"></i>
+            </button>
+            <div id="faqAns-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+              Absolutely. Nanoplastia is an organic amino-acid and keratin formula that is 100% free of formaldehyde and toxic fumes. It is particularly recommended for porous, bleached, or highlighted hair because it restores internal fiber elasticity with Olaplex bond repair.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-noir-900 border border-slate-800 rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(4)" class="w-full text-left px-5 py-4 flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-orchid-400 transition">
+              <span>Are treatment rooms private and sanitary?</span>
+              <i id="faqIcon-4" data-lucide="plus" class="w-5 h-5 text-orchid-400 shrink-0"></i>
+            </button>
+            <div id="faqAns-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+              Every client has exclusive access to an isolated, key-locked VIP suite with disposable single-use robes, freshly laundered towels, and private steam showers. All metal instruments are medical-autoclaved.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Main 4-Column Footer -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="space-y-4">
+          <img src="assets/siyas-brand-logo-dark.svg" alt="Siyas Luxury Spa and Salon" class="h-10 sm:h-12 w-auto object-contain">
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Premier sanctuary for Royal Bridal Artistry, Authentic Moroccan Hammam rituals, and Advanced Hair Aesthetics in Bhopal. 8+ years of verified luxury hospitality.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-mono text-orchid-400">
+            <span class="w-2 h-2 rounded-full bg-orchid-400"></span>
+            <span>4.8★ Magicpin &amp; Justdial Verified Salon</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Signature Rituals -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Signature Rituals</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#specialties" class="hover:text-white transition">Royal Bridal Suite (₹15k–₹35k)</a></li>
+            <li><a href="#specialties" class="hover:text-white transition">Moroccan Hammam Bath (₹4.5k–₹8.5k)</a></li>
+            <li><a href="#specialties" class="hover:text-white transition">Nanoplastia Hair Therapy (₹4k–₹10k)</a></li>
+            <li><a href="#specialties" class="hover:text-white transition">Pre-Bridal Radiance Indulgence (₹8k–₹18k)</a></li>
+            <li><a href="#specialties" class="hover:text-white transition">Hydra-Facial MD Aesthetics (₹3.5k–₹6.5k)</a></li>
+            <li><a href="#specialties" class="hover:text-white transition">Aromatherapy Deep Tissue Spa (₹2.5k–₹5k)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Campus Location & Directions (maps.google.com) -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Kolar Road Sanctuary</h4>
+          <div class="space-y-3 text-xs text-slate-400">
+            <p class="leading-relaxed">
+              <strong class="text-slate-300">Address:</strong><br>
+              2nd Floor, DK 4 - Annexe 4, Danish Kunj Bridge, Kolar Road, Bhopal, Madhya Pradesh – 462042
+            </p>
+            <p>
+              <strong class="text-slate-300">Hours:</strong><br>
+              Monday – Sunday: 10:00 AM – 09:00 PM<br>
+              (Open 7 Days • Private VIP Chambers)
+            </p>
+            <a href="https://maps.google.com/?q=Siyas+Spa+and+Salon+Danish+Kunj+Bridge+Kolar+Road+Bhopal" target="_blank" 
+               class="inline-flex items-center gap-1.5 text-orchid-400 hover:text-orchid-300 font-bold transition">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              <span>Open in Google Maps &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 4: Verified Contact Helpline -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">VIP Concierge Helpline</h4>
+          <div class="space-y-3 text-xs">
+            <div>
+              <div class="text-slate-500">Salon Manager &amp; Appointments:</div>
+              <a href="tel:+918401933469" class="text-white font-bold font-mono text-sm hover:text-orchid-400 transition flex items-center gap-1.5 mt-0.5">
+                <i data-lucide="phone" class="w-3.5 h-3.5 text-orchid-400"></i>
+                <span>+91 84019 33469</span>
+              </a>
+            </div>
+            <div>
+              <div class="text-slate-500">Alternate Concierge Line:</div>
+              <a href="tel:+918839739689" class="text-white font-bold font-mono text-sm hover:text-orchid-400 transition flex items-center gap-1.5 mt-0.5">
+                <i data-lucide="phone" class="w-3.5 h-3.5 text-orchid-400"></i>
+                <span>+91 88397 39689</span>
+              </a>
+            </div>
+            <div class="pt-2">
+              <a href="https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa%20Bhopal,%20I%20would%20like%20to%20connect%20with%20your%20Salon%20Concierge." 
+                 class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>WhatsApp VIP Concierge</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
+        <p>© 2026 Siyas Luxury Spa and Salon, Bhopal. All Rights Reserved. Danish Kunj Bridge, Kolar Road.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- FLOATING MOBILE QUICK DOCK (Sticky Bottom On Small Screens)               -->
+  <!-- ========================================================================= -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-noir-950/95 backdrop-blur-md border-t border-noir-800 p-2 sm:hidden flex items-center gap-2">
+    <a href="tel:+918401933469" class="flex-1 bg-noir-900 border border-noir-700 text-white text-xs font-bold py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
+      <i data-lucide="phone-call" class="w-4 h-4 text-orchid-400"></i>
+      <span>Call Desk</span>
+    </a>
+    <a href="https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20I%20want%20to%20reserve%20a%20VIP%20Appointment%20in%20Danish%20Kunj%20Kolar%20Road." 
+       class="flex-1 bg-emerald-500 text-slate-950 text-xs font-bold py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition shadow-lg">
+      <i data-lucide="message-square" class="w-4 h-4"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#bookingSection" class="bg-orchid-600 text-white p-3 rounded-xl active:scale-95 transition" aria-label="Book VIP Suite">
+      <i data-lucide="calendar" class="w-5 h-5"></i>
+    </a>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE MODAL CONSULTATION & RITUAL BREAKDOWN (openTipModal)          -->
+  <!-- ========================================================================= -->
+  <div id="tipModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
+    <div class="bg-noir-900 border border-orchid-500/40 rounded-2xl max-w-lg w-full p-6 shadow-2xl text-white relative">
+      <button onclick="closeTipModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="Close Modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-2 mb-3">
+        <span id="modalCategoryTag" class="text-[11px] font-bold text-orchid-400 bg-noir-950 border border-orchid-500/30 px-2.5 py-0.5 rounded uppercase">
+          RITUAL BREAKDOWN &amp; FORMULATIONS
+        </span>
+      </div>
+
+      <h3 id="modalTitle" class="text-xl font-serif font-bold text-white mb-2">Signature Treatment</h3>
+      
+      <div id="modalBody" class="text-xs sm:text-sm text-slate-300 space-y-3 mb-6 bg-noir-950 p-4 rounded-xl border border-slate-800 leading-relaxed font-sans">
+        <!-- Content injected by JavaScript openTipModal() -->
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <a id="modalActionBtn" href="#" target="_blank" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition flex-1">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Check Availability on WhatsApp</span>
+        </a>
+        <button onclick="closeTipModal()" class="w-full sm:w-auto bg-noir-800 hover:bg-noir-700 text-slate-300 font-bold px-4 py-3 rounded-xl text-xs sm:text-sm transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SCRIPT LOGIC (Lucide, Drawer, Filter, Beacon, Modal, FAQ, Booking Wizard) -->
+  <!-- ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      initCountdownBeacon();
+    });
+
+    // 1. 72-Hour VIP Priority Countdown Beacon
+    function initCountdownBeacon() {
+      const storageKey = 'siyas_staging_bp002_started';
+      let endTime = localStorage.getItem(storageKey);
+
+      if (!endTime) {
+        endTime = Date.now() + 72 * 60 * 60 * 1000;
+        localStorage.setItem(storageKey, endTime);
+      } else {
+        endTime = parseInt(endTime, 10);
+      }
+
+      function updateBeacon() {
+        const now = Date.now();
+        const diff = Math.max(0, endTime - now);
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const hElem = document.getElementById('beaconHours');
+        const mElem = document.getElementById('beaconMins');
+        const sElem = document.getElementById('beaconSecs');
+
+        if (hElem) hElem.innerText = String(hours).padStart(2, '0');
+        if (mElem) mElem.innerText = String(mins).padStart(2, '0');
+        if (sElem) sElem.innerText = String(secs).padStart(2, '0');
+      }
+
+      updateBeacon();
+      setInterval(updateBeacon, 1000);
+    }
+
+    // 2. Mobile Drawer Navigation Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileDrawer.classList.contains('hidden');
+        if (isHidden) {
+          mobileDrawer.classList.remove('hidden');
+          if (menuIcon) menuIcon.setAttribute('data-lucide', 'x');
+        } else {
+          mobileDrawer.classList.add('hidden');
+          if (menuIcon) menuIcon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons();
+      });
+    }
+
+    function closeMobileDrawer() {
+      if (mobileDrawer) {
+        mobileDrawer.classList.add('hidden');
+        if (menuIcon) menuIcon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+      }
+    }
+
+    // 3. Dynamic Treatment Category Filter (filterServices)
+    function filterServices(category) {
+      const cards = document.querySelectorAll('.service-card');
+      const tabs = document.querySelectorAll('.filter-tab');
+
+      // Update Tab Styles
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-noir-900', 'text-white');
+        tab.classList.add('bg-slate-100', 'text-slate-700');
+      });
+
+      const activeTab = document.getElementById(`tab-${category}`);
+      if (activeTab) {
+        activeTab.classList.remove('bg-slate-100', 'text-slate-700');
+        activeTab.classList.add('bg-noir-900', 'text-white');
+      }
+
+      // Filter Cards
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // 4. Interactive Ritual Breakdown Modal (openTipModal)
+    function openTipModal(type) {
+      const modal = document.getElementById('tipModal');
+      const tag = document.getElementById('modalCategoryTag');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+      const action = document.getElementById('modalActionBtn');
+
+      if (!modal) return;
+
+      if (type === 'bridal') {
+        tag.innerText = 'ROYAL BRIDAL SUITE';
+        title.innerText = 'Royal Bridal Makeover & Trousseau (₹15k – ₹35k)';
+        body.innerHTML = `
+          <p><strong>Step 1:</strong> Skin prep with hyaluronic hydration and pore-refining primer serum.</p>
+          <p><strong>Step 2:</strong> 4K HD Airbrush foundation contouring customized to your wedding lehenga palette.</p>
+          <p><strong>Step 3:</strong> Bespoke bridal hairstyle with fresh floral arrangement and jewelry pinning.</p>
+          <p><strong>Cosmetics:</strong> MAC Studio Fix, Huda Beauty Rose Quartz, Charlotte Tilbury Setting Spray.</p>
+        `;
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20Bridal%20Trousseau%20PDF%20and%20rates.';
+      } else if (type === 'moroccan') {
+        tag.innerText = 'MOROCCAN HAMMAM RITUAL';
+        title.innerText = 'Traditional Moroccan Bath & Steam (₹4.5k – ₹8.5k)';
+        body.innerHTML = `
+          <p><strong>Phase 1:</strong> Private eucalyptus steam bath to open pores and soften cutaneous layers.</p>
+          <p><strong>Phase 2:</strong> Black Savon Beldi soap massage & complete exfoliation using genuine Kessa mitts.</p>
+          <p><strong>Phase 3:</strong> Rhassoul lava clay purifying mask & cold-pressed pure Moroccan Argan oil body finish.</p>
+        `;
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20Moroccan%20Hammam%20details.';
+      } else if (type === 'hair') {
+        tag.innerText = 'HAIR AESTHETICS';
+        title.innerText = 'Nanoplastia & Hair Botox Lamination (₹4k – ₹10k)';
+        body.innerHTML = `
+          <p><strong>Phase 1:</strong> Deep clarifying wash to remove silicone residue and mineral buildup.</p>
+          <p><strong>Phase 2:</strong> Organic nano-collagen and protein emulsion sealed with digital thermal titanium plates.</p>
+          <p><strong>Phase 3:</strong> Olaplex bond repair treatment with 6-month high-gloss glass hair lamination.</p>
+        `;
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20Nanoplastia%20details.';
+      } else if (type === 'prebridal') {
+        tag.innerText = 'PRE-BRIDAL INDULGENCE';
+        title.innerText = 'Pre-Bridal Radiance & Full-Body Polish (₹8k – ₹18k)';
+        body.innerHTML = `
+          <p><strong>Day 1:</strong> Full-body chocolate/gold polish, Brazilian waxing, and Casmara algae peel-off facial.</p>
+          <p><strong>Day 2:</strong> Botanical spa manicure & pedicure, deeply hydrating hair spa, and whole-body glow finish.</p>
+        `;
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20Pre-Bridal%20Package%20details.';
+      } else if (type === 'hydra') {
+        tag.innerText = 'DERMA CLINICAL GLOW';
+        title.innerText = 'Hydra-Facial MD Aesthetics (₹3.5k – ₹6.5k)';
+        body.innerHTML = `
+          <p><strong>Step 1:</strong> Vortex vacuum pore cleansing & salicylic gentle exfoliation.</p>
+          <p><strong>Step 2:</strong> Painless automated blackhead suction & multi-peptide hydration serum infusion.</p>
+          <p><strong>Step 3:</strong> Red & Blue LED phototherapy for collagen production and anti-bacterial calming.</p>
+        `;
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20Hydra-Facial%20details.';
+      } else if (type === 'swedish') {
+        tag.innerText = 'AROMATHERAPY SPA';
+        title.innerText = 'Swedish & Deep Tissue Massage (₹2.5k – ₹5k)';
+        body.innerHTML = `
+          <p><strong>Experience:</strong> 60 to 90 minutes of targeted muscular tension relief with heated almond and lavender oils, followed by private eucalyptus steam shower.</p>
+        `;
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20please%20send%20Swedish%20Massage%20details.';
+      } else {
+        tag.innerText = 'SIYAS SPA MENU';
+        title.innerText = 'Signature Wellness Ritual';
+        body.innerHTML = '<p>Customized pampering session in private luxury suite.</p>';
+        action.href = 'https://wa.me/918401933469?text=Namaskar%20Siyas%20Spa,%20I%20want%20to%20inquire%20about%20your%20services.';
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeTipModal() {
+      const modal = document.getElementById('tipModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // 5. FAQ Accordion (toggleFaq)
+    function toggleFaq(index) {
+      const ans = document.getElementById(`faqAns-${index}`);
+      const icon = document.getElementById(`faqIcon-${index}`);
+
+      if (!ans) return;
+
+      const isHidden = ans.classList.contains('hidden');
+
+      // Close all other FAQs
+      for (let i = 1; i <= 4; i++) {
+        const otherAns = document.getElementById(`faqAns-${i}`);
+        const otherIcon = document.getElementById(`faqIcon-${i}`);
+        if (otherAns && i !== index) {
+          otherAns.classList.add('hidden');
+          if (otherIcon) {
+            otherIcon.setAttribute('data-lucide', 'plus');
+          }
+        }
+      }
+
+      if (isHidden) {
+        ans.classList.remove('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'minus');
+      } else {
+        ans.classList.add('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'plus');
+      }
+      lucide.createIcons();
+    }
+
+    // 6. 2-Step VIP Booking Submission & WhatsApp Dispatch (handleBookingSubmit & confirmMsg)
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const service = document.getElementById('serviceChoice').value;
+      const time = document.getElementById('timePreference').value;
+
+      const confirmMsg = document.getElementById('confirmMsg');
+      const confirmDetails = document.getElementById('confirmDetails');
+      const confirmBtn = document.getElementById('confirmWhatsappBtn');
+
+      const messageText = `Namaskar Siyas Luxury Spa Bhopal,
+I would like to reserve a VIP Appointment:
+• Guest Name: ${name}
+• WhatsApp Contact: ${phone}
+• Selected Ritual: ${service}
+• Preferred Slot: ${time}
+• Location: 2nd Floor, Danish Kunj Bridge, Kolar Road
+
+Please confirm therapist and private suite availability.`;
+
+      const encoded = encodeURIComponent(messageText);
+      const waUrl = `https://wa.me/918401933469?text=${encoded}`;
+
+      if (confirmDetails) {
+        confirmDetails.innerHTML = `
+          <div><strong>Guest:</strong> ${name} (<a href="tel:${phone}" class="text-gold-400 font-bold">${phone}</a>)</div>
+          <div class="mt-1"><strong>Selected Ritual:</strong> ${service}</div>
+          <div class="mt-1"><strong>Preferred Timing:</strong> ${time}</div>
+          <div class="mt-1 text-emerald-400 font-semibold">✓ VIP Private Chamber Held at 2nd Floor, Danish Kunj Bridge, Kolar Road.</div>
+        `;
+      }
+
+      if (confirmBtn) {
+        confirmBtn.href = waUrl;
+      }
+
+      if (confirmMsg) {
+        confirmMsg.classList.remove('hidden');
+        confirmMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function resetBookingForm() {
+      const confirmMsg = document.getElementById('confirmMsg');
+      const form = document.getElementById('bookingForm');
+      if (confirmMsg) confirmMsg.classList.add('hidden');
+      if (form) form.reset();
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========================================== -->
+<!-- NEXG AI CONCIERGE & BOOKING ENGINE (RULE 6) -->
+<!-- ========================================== -->
+<div id="ai-concierge-root" class="fixed bottom-6 right-6 z-50 font-sans">
+  <!-- Launcher Button -->
+  <button id="ai-concierge-toggle" aria-label="Open AI Concierge" class="relative group flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white pl-4 pr-5 py-3 rounded-full shadow-2xl border border-amber-500/40 hover:border-amber-400 transition-all duration-300 transform hover:scale-105">
+    <span class="relative flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+    </span>
+    <div class="flex items-center gap-2">
+      <svg class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+      </svg>
+      <span class="text-xs font-bold tracking-wide text-amber-300 group-hover:text-amber-200">AI Concierge &amp; Booking</span>
+    </div>
+  </button>
+
+  <!-- Interactive Modal / Chat Window -->
+  <div id="ai-concierge-window" class="hidden absolute bottom-16 right-0 w-[360px] sm:w-[410px] max-h-[580px] bg-stone-950 text-stone-100 rounded-2xl shadow-2xl border border-stone-800 flex flex-col overflow-hidden backdrop-blur-xl animate-fade-in">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-stone-900 via-stone-900 to-stone-950 p-4 border-b border-stone-800 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white tracking-wide">Siyas Luxury Spa AI Concierge</h4>
+          <p class="text-[10px] text-amber-400/90 flex items-center gap-1.5 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Kolar Road VIP Beauty Desk
+          </p>
+        </div>
+      </div>
+      <button id="ai-concierge-close" class="text-stone-400 hover:text-white p-1 rounded-lg hover:bg-stone-800 transition-colors" aria-label="Close Assistant">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="ai-concierge-messages" class="flex-1 overflow-y-auto p-4 space-y-3 text-xs leading-relaxed max-h-[360px]">
+      <div class="flex items-start gap-2.5">
+        <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5 text-[11px] font-bold">AI</div>
+        <div class="bg-stone-900 border border-stone-800 p-3 rounded-2xl rounded-tl-sm text-stone-200">
+          Namaskar! Welcome to Siyas Luxury Spa & Salon, Kolar Road. I am your personal beauty concierge. How can I assist you?
+        </div>
+      </div>
+
+      <!-- Quick Action Pills -->
+      <div class="pt-2">
+        <p class="text-[10px] uppercase font-bold text-stone-400 tracking-wider mb-2">Quick Inquiries</p>
+        <div class="flex flex-wrap gap-1.5" id="ai-concierge-pills">
+          <button type="button" class="ai-prompt-pill text-[11px] font-medium bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-amber-300 border border-stone-800 hover:border-amber-500/40 px-2.5 py-1 rounded-full transition-colors" data-query="What is included in the Authentic Moroccan Bath & Body Polish?">🧖 Moroccan Hammam</button><button type="button" class="ai-prompt-pill text-[11px] font-medium bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-amber-300 border border-stone-800 hover:border-amber-500/40 px-2.5 py-1 rounded-full transition-colors" data-query="What are your private bridal studio packages?">👰 Bridal Lounge</button><button type="button" class="ai-prompt-pill text-[11px] font-medium bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-amber-300 border border-stone-800 hover:border-amber-500/40 px-2.5 py-1 rounded-full transition-colors" data-query="Where on Kolar Road are you located?">📍 Location & Hours</button><button type="button" class="ai-prompt-pill text-[11px] font-medium bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-amber-300 border border-stone-800 hover:border-amber-500/40 px-2.5 py-1 rounded-full transition-colors" data-query="I want to reserve a private spa suite.">📅 Reserve VIP Slot</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direct WhatsApp Action Banner -->
+    <div class="px-4 py-2 bg-stone-900/80 border-t border-stone-800/80 flex items-center justify-between">
+      <span class="text-[11px] text-stone-400">Ready to speak with the desk?</span>
+      <a id="ai-concierge-wa-link" href="https://wa.me/918401933469?text=Namaskar,%20I%20have%20an%20inquiry%20from%20the%20website." target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg transition-all shadow-md">
+        <span>WhatsApp</span>
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      </a>
+    </div>
+
+    <!-- Input Footer -->
+    <div class="p-3 bg-stone-950 border-t border-stone-800 flex items-center gap-2">
+      <input id="ai-concierge-input" type="text" placeholder="Ask about services, pricing, bookings..." class="flex-1 bg-stone-900 border border-stone-800 text-stone-100 placeholder-stone-500 text-xs px-3.5 py-2.5 rounded-xl focus:outline-none focus:border-amber-400">
+      <button id="ai-concierge-send" aria-label="Send Message" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold p-2.5 rounded-xl transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const profile = {"title": "Siyas Luxury Spa AI Concierge", "subtitle": "Kolar Road VIP Beauty Desk", "avatar": "assets/siyas-brand-logo.svg", "theme_color": "amber", "primary_phone": "918401933469", "greeting": "Namaskar! Welcome to Siyas Luxury Spa & Salon, Kolar Road. I am your personal beauty concierge. How can I assist you?", "quick_pills": [{"label": "\ud83e\uddd6 Moroccan Hammam", "query": "What is included in the Authentic Moroccan Bath & Body Polish?"}, {"label": "\ud83d\udc70 Bridal Lounge", "query": "What are your private bridal studio packages?"}, {"label": "\ud83d\udccd Location & Hours", "query": "Where on Kolar Road are you located?"}, {"label": "\ud83d\udcc5 Reserve VIP Slot", "query": "I want to reserve a private spa suite."}], "faqs": [{"keywords": ["moroccan", "hammam", "bath", "steam", "spa"], "answer": "Our Authentic Moroccan Hammam ritual includes eucalyptus black soap cleansing, heated steam room therapy, Kessa glove exfoliation, and an argan oil restorative massage (\u20b92,999+)."}, {"keywords": ["bridal", "makeup", "lounge"], "answer": "Siyas features private VIP bridal suites with stage daylighting. Packages range from \u20b97,999 to \u20b916,000 including pre-bridal skin therapy, Mac/Kryolan HD airbrush makeup, and saree couture draping."}, {"keywords": ["location", "address", "kolar", "bridge"], "answer": "We are located at 2nd Floor, DK 4 - Annexe 4, Danish Kunj Bridge, Kolar Road, Bhopal, MP 462042. Open daily 10:00 AM \u2013 09:00 PM."}, {"keywords": ["book", "appointment", "reserve"], "answer": "Private spa rooms and senior stylist chairs are ready. Tap below to chat directly with our guest relations manager on WhatsApp."}]};
+  const toggleBtn = document.getElementById('ai-concierge-toggle');
+  const closeBtn = document.getElementById('ai-concierge-close');
+  const chatWindow = document.getElementById('ai-concierge-window');
+  const messagesBox = document.getElementById('ai-concierge-messages');
+  const inputField = document.getElementById('ai-concierge-input');
+  const sendBtn = document.getElementById('ai-concierge-send');
+  const waLink = document.getElementById('ai-concierge-wa-link');
+
+  if (!toggleBtn || !chatWindow) return;
+
+  function toggleChat() {
+    chatWindow.classList.toggle('hidden');
+    if (!chatWindow.classList.contains('hidden')) {
+      inputField.focus();
+    }
+  }
+
+  toggleBtn.addEventListener('click', toggleChat);
+  closeBtn.addEventListener('click', toggleChat);
+
+  function appendUserMessage(text) {
+    const row = document.createElement('div');
+    row.className = 'flex items-start justify-end gap-2.5';
+    row.innerHTML = '<div class="bg-amber-500/10 border border-amber-500/30 text-amber-200 p-3 rounded-2xl rounded-tr-sm">' + escapeHtml(text) + '</div>';
+    messagesBox.appendChild(row);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }
+
+  function appendBotMessage(text, suggestWa = false) {
+    const row = document.createElement('div');
+    row.className = 'flex items-start gap-2.5';
+    let waHtml = '';
+    if (suggestWa) {
+      const enc = encodeURIComponent("Namaskar, I inquired: " + text.slice(0, 80));
+      waHtml = '<div class="mt-2.5 pt-2 border-t border-stone-800"><a href="https://wa.me/' + profile.primary_phone + '?text=' + enc + '" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-400 hover:underline">Confirm on WhatsApp ↗</a></div>';
+    }
+    row.innerHTML = '<div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5 text-[11px] font-bold">AI</div><div class="bg-stone-900 border border-stone-800 p-3 rounded-2xl rounded-tl-sm text-stone-200 whitespace-pre-line">' + escapeHtml(text) + waHtml + '</div>';
+    messagesBox.appendChild(row);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>"']/g, function(m) {
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];
+    });
+  }
+
+  function findAnswer(query) {
+    const q = query.toLowerCase();
+    for (let f of profile.faqs) {
+      for (let k of f.keywords) {
+        if (q.includes(k.toLowerCase())) {
+          return f.answer;
+        }
+      }
+    }
+    return "Thank you for asking! For custom requirements, exact timing slots, or tailored service quotes, our dedicated front desk is available right now via WhatsApp.";
+  }
+
+  function handleSend(userText) {
+    const text = userText || inputField.value.trim();
+    if (!text) return;
+    appendUserMessage(text);
+    if (!userText) inputField.value = '';
+
+    const answer = findAnswer(text);
+    setTimeout(() => {
+      appendBotMessage(answer, true);
+      waLink.href = 'https://wa.me/' + profile.primary_phone + '?text=' + encodeURIComponent('Namaskar! Regarding: ' + text);
+    }, 400);
+  }
+
+  sendBtn.addEventListener('click', () => handleSend());
+  inputField.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') handleSend();
+  });
+
+  document.querySelectorAll('.ai-prompt-pill').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const q = this.getAttribute('data-query');
+      handleSend(q);
+    });
+  });
+})();
+</script>
+<!-- END NEXG AI CONCIERGE -->
+
+</body>
+</html>
